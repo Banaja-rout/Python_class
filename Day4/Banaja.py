@@ -7,76 +7,46 @@ print(num)
 
 st=input("Enter any of these mentioning Operation(add,sub,mul,div,fdiv): ")
 
-if st=='add':
+def Add(value):
     sum=0
-    for i in num:
-        sum+=i
-    print(sum)
-elif st=='sub':
-    sub=0
-    for i in num:
-        sub=i-sub
-    print(sub)
-elif st=='mul':
-    mul=1
-    for i in num:
-        mul*=i
-    print(mul)
-elif st=='div':
-    div=1
-    for i in num:
-        div=i/div
-    print(div)
-elif st=='fdiv':
-    fdiv=1
-    for i in num:
-        fdiv=i//fdiv
-    print(fdiv)
-else:
-    print("Sorry Your Choice is not in the List!\nPlese Select one Opration in the list....")
-
-
-#Using Function
-def fun1(add):
-    sum=0
-    for i in add:
+    for i in value:
         sum+=i
     return sum
 
-def fun2(sub):
-    count=0
-    for i in sub:
-        count=i-count
-    return count
+def Sub(value):
+    sub=0
+    for i in value:
+        sub=i-sub
+    return sub
 
-def fun3(mul):
-    count=1
-    for i in mul:
-        count*=i
-    return count
+def Mul(value):
+    mul=1
+    for i in value:
+        mul*=i
+    return mul
 
-def fun4(div):
-    count=1
-    for i in div:
-        count=i/count
-    return count
+def Div(value):
+    div=1
+    for i in value:
+        div=i/div
+    return div
 
-def fun5(fdiv):
-    count=1
-    for i in fdiv:
-        count=i//count
-    return count
+def Fdiv(value):
+    fdiv=1
+    for i in value:
+        fdiv=i//fdiv
+    return fdiv
 
 if st=='add':
-    print("Addition: ",fun1(num))
+    print("Addition: ",Add(num))
 elif st=='sub':
-    print("Substraction: ",fun2(num))
+    print("Substraction: ",Sub(num))
 elif st=='mul':
-    print("multiplication: ",fun3(num))
+    print("multiplication: ",Mul(num))
 elif st=='div':
-    print("Division: ",fun4(num))
+    print("Division: ",Div(num))
 elif st=='fdiv':
-    print("Floor Division: ",fun5(num))
+    print("Floor Division: ",Fdiv(num))
 else:
     print("Sorry Your Choice is not in the List!\nPlese Select one Opration in the list....")
 
