@@ -22,15 +22,15 @@ class Storage:
 
     def calculate_size(self):
         self.size = sum([item.size for item in self.container])
-
+        return self.size
+        
 item1 = Item('item1','type1', color='red', weight= '20kg')
-
 
 storage1 = Storage('storage1', 1, 'protocol1')
 
 print(item1.size)
 
-print(storage1.add_element(['item1','item2','item3']))
+print(storage1.add_element(item1)
 
 print(storage1.calculate_size())
 
