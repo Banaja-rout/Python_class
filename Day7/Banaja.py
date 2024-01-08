@@ -15,17 +15,18 @@ class Storage:
         self.protocol = protocol
         self.container = []
         self.max_size=max_size
-      
+        self.current_size=self.calculate_size()
+
     def add_element(self, item):
         if not isinstance(item,Item):
-                raise TypeError
+            raise TypeError 
         self.container.append(item)
+        if self.calculate_size()>self.max_size:
+            raise MemoryError
         return item      
         
     def calculate_size(self):
         self.size = sum([item.size for item in self.container])
-        if self.size>self.max_size:
-                raise MemoryError
         return self.size
 
 item1 = Item('item1','type1', color='red', weight= '20kg')
