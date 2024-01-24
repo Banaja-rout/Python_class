@@ -1,5 +1,6 @@
-### Classmethod
-
-classmethod is a decorator that defines a method that is bound to the class and not the instance of the class. This means that the method can be called on the class itself, rather than on an instance of the class. The primary use of classmethod is to define methods that work with the class and its attributes rather than with instances of the class.
-## syntax
-@classmethod
+Classmethod  
+A classmethod is a special method that is bound to a class rather than an instance of the class. It takes the class itself as its first parameter, conventionally named cls, instead of the instance.
+Staticmethod
+A staticmethod is a special method that belongs to a class rather than an instance of the class. It does not have access to the instance or the class itself, and it is defined using the @staticmethod decorator.
+Abstarctmethod
+An abstract method is a method declared in an abstract class that has no implementation in the abstract class itself. Abstract classes are classes that cannot be instantiated and are meant to be subclassed by other classes. Abstract methods provide a way to define a common interface for all the classes that inherit from the abstract class, but the actual implementation of the method is left to the subclasses.
